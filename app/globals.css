@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
+/* Brand colors: black / near-black, warm orange flame, white / off-white, subtle grays */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf9;
+  --foreground: #0c0c0c;
+  --muted: #57534e;
+  --muted-bg: #f5f5f4;
+  --primary: #ea580c;
+  --primary-hover: #c2410c;
+  --primary-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #0c0c0c;
+  --border: #e7e5e4;
+  --ring: #ea580c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-muted-bg: var(--muted-bg);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
 }
