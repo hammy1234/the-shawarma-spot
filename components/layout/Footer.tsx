@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/shared/Logo";
-import { SITE, HOURS, SOCIAL, MAP_URL, ORDER_ONLINE_URL } from "@/data/site";
+import { SITE, HOURS, SOCIAL, MAP_URL } from "@/data/site";
+import { OrderOnlineButton } from "@/components/order/OrderOnlineButton";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -38,9 +39,7 @@ export function Footer() {
                   </li>
                 ))}
                 <li>
-                  <a href={ORDER_ONLINE_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-white/80 hover:text-primary transition-colors">
-                    Order Online
-                  </a>
+                  <OrderOnlineButton variant="link" />
                 </li>
               </ul>
             </div>

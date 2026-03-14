@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { OrderModalProvider } from "@/components/order/OrderModalProvider";
 import { SITE } from "@/data/site";
 
 const dmSans = DM_Sans({
@@ -41,9 +42,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={dmSans.variable}>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <OrderModalProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </OrderModalProvider>
       </body>
     </html>
   );

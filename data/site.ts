@@ -26,9 +26,25 @@ export const HOURS = [
   { day: "Saturday", hours: "11 AM – 9 PM" },
 ] as const;
 
-/** Uber Eats store link — used by all "Order Online" links site-wide. */
+/** Uber Eats store link (kept for backwards compatibility; prefer ORDERING_PLATFORMS). */
 export const ORDER_ONLINE_URL =
   "https://www.ubereats.com/store/the-shawarma-spot-grayson/X5sq8ZTpQPasndC-L48cCA";
+
+/** Delivery platform URLs — edit here to update links across the order modal. */
+export const ORDERING_PLATFORMS = [
+  {
+    name: "Uber Eats",
+    url: "https://www.ubereats.com/store/the-shawarma-spot-grayson/X5sq8ZTpQPasndC-L48cCA",
+  },
+  {
+    name: "Grubhub",
+    url: "https://www.grubhub.com/restaurant/the-shawarma-spot-1417-grayson-hwy-lawrenceville/12987248?utm_source=grubhub_iosapp&utm_medium=content_owned&utm_campaign=menushare&utm_content=share-link",
+  },
+  {
+    name: "DoorDash",
+    url: "https://www.doordash.com/store/the-shawarma-spot-grayson-1417-grayson-hwy-ste-c-ste-c-lawrenceville-35828421/79356579/?aw=QGJElAVdC1fDRGdG&utm_source=mx_share",
+  },
+] as const;
 
 /** Google Maps URL for directions. Replace with your exact place link. */
 export const MAP_URL =
@@ -44,11 +60,11 @@ export const SOCIAL = {
   twitter: "",
 } as const;
 
-/** Delivery / ordering platform links — replace with your store links when ready. */
+/** @deprecated Use ORDERING_PLATFORMS instead. */
 export const ORDERING_LINKS = {
-  uberEats: "https://www.ubereats.com/store/the-shawarma-spot-grayson", // placeholder
-  doorDash: "https://www.doordash.com/store/the-shawarma-spot-grayson", // placeholder
-  grubhub: "https://www.grubhub.com/restaurant/the-shawarma-spot-grayson", // placeholder
+  uberEats: ORDER_ONLINE_URL,
+  doorDash: ORDERING_PLATFORMS[2].url,
+  grubhub: ORDERING_PLATFORMS[1].url,
 } as const;
 
 export const OFFERS = [

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { SITE, HOURS, MAP_URL, MAP_EMBED_SRC, ORDER_ONLINE_URL } from "@/data/site";
+import { SITE, HOURS, MAP_URL, MAP_EMBED_SRC } from "@/data/site";
+import { OrderOnlineButton } from "@/components/order/OrderOnlineButton";
 import { MapPlaceholder } from "@/components/contact/MapPlaceholder";
 
 export const metadata: Metadata = {
@@ -51,14 +52,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <a
-                href={ORDER_ONLINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-11 px-6 text-base rounded-xl min-h-[44px]"
-              >
-                Order Online
-              </a>
+              <OrderOnlineButton size="md" />
               <Button href={`tel:${SITE.phoneRaw}`} variant="secondary" size="md">
                 Call Now
               </Button>

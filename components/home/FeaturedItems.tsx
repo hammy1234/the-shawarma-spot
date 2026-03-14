@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { FEATURED_ITEMS } from "@/data/menu";
-import { ORDER_ONLINE_URL } from "@/data/site";
+import { OrderOnlineButton } from "@/components/order/OrderOnlineButton";
 
 export function FeaturedItems() {
   return (
@@ -34,14 +34,7 @@ export function FeaturedItems() {
                 <Button href="/menu" variant="outline" size="sm">
                   View Menu
                 </Button>
-                <a
-                  href={ORDER_ONLINE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-9 px-4 text-sm rounded-lg"
-                >
-                  Order Online
-                </a>
+                <OrderOnlineButton size="sm" />
               </div>
             </div>
           </article>
