@@ -29,9 +29,14 @@ export default function MenuPage() {
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-background">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Menu</h1>
             <p className="mt-2 text-white/90">Halal bowls, wraps, sandwiches & sides — made to order in Grayson.</p>
-            <Button href={ORDER_ONLINE_URL} variant="primary" size="md" className="mt-4">
+            <a
+              href={ORDER_ONLINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-11 px-6 text-base rounded-xl min-h-[44px] mt-4"
+            >
               Order Online
-            </Button>
+            </a>
           </div>
         </div>
       </Section>
@@ -69,9 +74,14 @@ export default function MenuPage() {
         ))}
 
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button href={ORDER_ONLINE_URL} variant="primary" size="lg">
+          <a
+            href={ORDER_ONLINE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-12 px-8 text-lg rounded-xl min-h-[48px]"
+          >
             Order Online
-          </Button>
+          </a>
           <Button href="/contact" variant="outline" size="lg">
             Catering inquiries
           </Button>

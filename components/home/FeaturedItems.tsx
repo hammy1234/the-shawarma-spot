@@ -34,9 +34,14 @@ export function FeaturedItems() {
                 <Button href="/menu" variant="outline" size="sm">
                   View Menu
                 </Button>
-                <Button href={ORDER_ONLINE_URL} variant="primary" size="sm">
+                <a
+                  href={ORDER_ONLINE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-9 px-4 text-sm rounded-lg"
+                >
                   Order Online
-                </Button>
+                </a>
               </div>
             </div>
           </article>

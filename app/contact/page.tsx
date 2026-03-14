@@ -51,9 +51,14 @@ export default function ContactPage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Button href={ORDER_ONLINE_URL} variant="primary" size="md">
+              <a
+                href={ORDER_ONLINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-11 px-6 text-base rounded-xl min-h-[44px]"
+              >
                 Order Online
-              </Button>
+              </a>
               <Button href={`tel:${SITE.phoneRaw}`} variant="secondary" size="md">
                 Call Now
               </Button>

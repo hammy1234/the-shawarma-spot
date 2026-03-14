@@ -54,13 +54,15 @@ export function Button({
   if ("href" in props && props.href) {
     const { href, ...rest } = props;
     const isExternal = href.startsWith("http");
+    if (isExternal) {
+      return (
+        <a href={href} className={styles} target="_blank" rel="noopener noreferrer" {...rest}>
+          {children}
+        </a>
+      );
+    }
     return (
-      <Link
-        href={href}
-        className={styles}
-        {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
-        {...rest}
-      >
+      <Link href={href} className={styles} {...rest}>
         {children}
       </Link>
     );

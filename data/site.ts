@@ -26,8 +26,9 @@ export const HOURS = [
   { day: "Saturday", hours: "11 AM – 9 PM" },
 ] as const;
 
-/** Replace with your actual ordering URL (Uber Eats, DoorDash, Grubhub, or your own). */
-export const ORDER_ONLINE_URL = "https://www.ubereats.com/store/the-shawarma-spot-grayson"; // placeholder
+/** Uber Eats store link — used by all "Order Online" links site-wide. */
+export const ORDER_ONLINE_URL =
+  "https://www.ubereats.com/store/the-shawarma-spot-grayson/X5sq8ZTpQPasndC-L48cCA";
 
 /** Google Maps URL for directions. Replace with your exact place link. */
 export const MAP_URL =

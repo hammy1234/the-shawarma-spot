@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/shared/Logo";
 import { SITE, ORDER_ONLINE_URL } from "@/data/site";
@@ -42,9 +41,14 @@ export function Navbar() {
             >
               {SITE.phone}
             </a>
-            <Button href={ORDER_ONLINE_URL} variant="primary" size="md">
+            <a
+              href={ORDER_ONLINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-11 px-6 text-base rounded-xl min-h-[44px]"
+            >
               Order Online
-            </Button>
+            </a>
           </div>
 
           {/* Mobile: hamburger + call */}
@@ -92,15 +96,15 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="mt-3 pt-3 border-t border-border">
-                <Button
+                <a
                   href={ORDER_ONLINE_URL}
-                  variant="primary"
-                  size="md"
-                  className="w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-11 px-6 text-base rounded-xl min-h-[44px] w-full"
                   onClick={() => setMobileOpen(false)}
                 >
                   Order Online
-                </Button>
+                </a>
               </div>
             </nav>
           </div>

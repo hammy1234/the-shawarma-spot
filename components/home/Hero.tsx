@@ -36,9 +36,14 @@ export function Hero() {
           {SITE.location} / Lawrenceville area
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button href={ORDER_ONLINE_URL} variant="primary" size="lg" className="w-full sm:w-auto">
+          <a
+            href={ORDER_ONLINE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary-hover shadow-sm h-12 px-8 text-lg rounded-xl min-h-[48px] w-full sm:w-auto"
+          >
             Order Online
-          </Button>
+          </a>
           <Button href="/menu" variant="outlineLight" size="lg" className="w-full sm:w-auto">
             View Menu
           </Button>
