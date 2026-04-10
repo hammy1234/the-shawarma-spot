@@ -8,8 +8,8 @@ const GALLERY_IMAGES = [
   { src: "/images/shawarma-loaded-fries.jpg", alt: "Shawarma loaded fries" },
   { src: "/images/philly-cheesesteak-burger.jpg", alt: "Philly cheesesteak burger" },
   { src: "/images/tacos.jpg", alt: "Tacos" },
-  { src: "/images/mezze-platter.jpg", alt: "Mezze platter at The Shawarma Spot Grayson" },
-  { src: "/images/shawarma-loaded-fries.jpg", alt: "Fresh halal food" },
+  { src: "/images/pics/Drum-Sticks-2.jpg", alt: "Fried Drumsticks" },
+  { src: "/images/pics/Tenders.jpg", alt: "Crispy Chicken Tenders" },
 ];
 
 export function Gallery() {
