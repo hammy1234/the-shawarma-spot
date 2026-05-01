@@ -11,8 +11,8 @@ export const SITE = {
   description:
     "At The Shawarma Spot, we serve fresh, authentic halal food with a commitment to quality and community. Our goal is to bring people together through delicious food and a welcoming experience.",
   address: "1417 Grayson Hwy Ste C, Lawrenceville, GA 30045",
-  phone: "(678) 580-2516",
-  phoneRaw: "6785802516",
+  phone: "(470) 478-3389",
+  phoneRaw: "+14704783389",
   email: "", // optional, for contact form or display
 } as const;
 
